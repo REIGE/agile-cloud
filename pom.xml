@@ -12,8 +12,13 @@
         <module>agile-security</module>
     </modules>
 
-    <dependencyManagement>
+    <!--声明版本变量-->
+    <properties>
+        <agile.security.version>1.0-SNAPSHOT</agile.security.version>
+    </properties>
 
+
+    <dependencyManagement>
         <dependencies>
             <!--管理版本-->
             <dependency>
