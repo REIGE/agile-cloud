@@ -1,5 +1,7 @@
 package com.reige.security.core;
 
+import com.reige.security.core.properties.SecurityProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -7,5 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2018/8/16.
  */
 @Configuration
+@EnableConfigurationProperties(SecurityProperties.class)
 public class SecurityCoreConfig {
 }
