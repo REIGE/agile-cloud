@@ -6,11 +6,14 @@ package com.reige.security.core.properties;
  */
 public class BrowserProperties {
 
-    private String loginPage = "/demo-signIn.html";
+    private String loginPage = "/agile-login.html";
 
-    private String registerPage = "/demo-signUp.html";
+    private String registerPage = "/agile-sign-up.html";
 
-
+    /**
+     * session配置
+     */
+    private SessionProperties session = new SessionProperties();
     /**
      * 登录响应类型
      */
@@ -33,6 +36,14 @@ public class BrowserProperties {
      */
     private String signOutUrl;
 
+
+    public SessionProperties getSession() {
+        return session;
+    }
+
+    public void setSession(SessionProperties session) {
+        this.session = session;
+    }
 
     public String getLoginPage() {
         return loginPage;

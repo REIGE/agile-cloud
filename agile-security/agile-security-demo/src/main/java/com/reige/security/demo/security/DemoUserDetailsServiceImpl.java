@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
  * @date 2018/8/29.
  */
 @Service
-public class DemoUserDetailsService implements UserDetailsService, SocialUserDetailsService {
+public class DemoUserDetailsServiceImpl implements UserDetailsService, SocialUserDetailsService {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -44,7 +44,7 @@ public class DemoUserDetailsService implements UserDetailsService, SocialUserDet
         // 根据用户名查找用户信息
         // 根据查找到的用户信息判断用户是否被冻结
         String password = passwordEncoder.encode("123456");
-        logger.info("机密后的密码：{}", password);
+        logger.info("加密后的密码：{}", password);
         return new SocialUser(userId,
                 password,
                 true,
