@@ -14,6 +14,7 @@ public class BrowserProperties {
      * session配置
      */
     private SessionProperties session = new SessionProperties();
+
     /**
      * 登录响应类型
      */
