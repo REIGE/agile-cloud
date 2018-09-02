@@ -10,6 +10,9 @@ import java.util.List;
 
 /**
  * 默认的授权配置管理器
+ *
+ * @author chenrui reige3@gmail.com
+ * @date 2018/8/31.
  */
 @Component
 public class BaseAuthorizeConfigManager implements AuthorizeConfigManager {
@@ -33,7 +36,7 @@ public class BaseAuthorizeConfigManager implements AuthorizeConfigManager {
             }
         }
 
-        if(!existAnyRequestConfig){
+        if (!existAnyRequestConfig) {
             config.anyRequest().authenticated();
         }
     }

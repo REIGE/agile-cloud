@@ -12,6 +12,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * 核心模块的授权配置提供器，安全模块涉及的url的授权配置在这里。
+ *
+ * @author chenrui reige3@gmail.com
+ * @date 2018/8/31.
  */
 @Component
 @Order(Integer.MIN_VALUE)

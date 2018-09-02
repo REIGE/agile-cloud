@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * 表单登录配置
+ *
+ * @author chenrui reige3@gmail.com
+ * @date 2018/9/1.
  */
 @Component
 public class FormAuthenticationConfig {

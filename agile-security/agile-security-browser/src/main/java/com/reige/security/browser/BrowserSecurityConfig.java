@@ -78,18 +78,14 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                     .and()
                 // session 配置
                 .sessionManagement()
+                    // session 失效策略
                     .invalidSessionStrategy(invalidSessionStrategy)
+                    // 最大session 数量
                     .maximumSessions(securityProperties.getBrowser().getSession().getMaximumSessions())
+                    // 当session数量达到最大时，是否阻止后来的用户登录（不阻止之前登录的用户session将失效）
                     .maxSessionsPreventsLogin(securityProperties.getBrowser().getSession().isMaxSessionsPreventsLogin())
+                    // 并发登录导致前一个失效的处理策略
                     .expiredSessionStrategy(sessionInformationExpiredStrategy)
-                    // 设置session失效之后跳转到的url
-    //                .invalidSessionUrl("/session/invalid")
-    //                // 设置最大session数量
-    //                .maximumSessions(1)
-    //                //当session数量达到最大时，阻止后来的用户登录
-    //                //.maxSessionsPreventsLogin(true)
-    //                // session超时处理策略
-    //                .expiredSessionStrategy(new ExpiredSessionStrategy())
                     .and()
                     .and()
                 .logout()

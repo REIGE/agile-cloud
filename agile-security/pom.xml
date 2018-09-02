@@ -16,6 +16,7 @@
         <module>agile-security-core</module>
         <module>agile-security-browser</module>
         <module>agile-security-demo</module>
+        <module>agile-security-authorize</module>
     </modules>
 
 

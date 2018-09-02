@@ -35,7 +35,6 @@ public class DemoUserDetailsServiceImpl implements UserDetailsService, SocialUse
     public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
 
         logger.info("社交登录用户Id为:{}", userId);
-
         return buildUser(userId);
     }
 
